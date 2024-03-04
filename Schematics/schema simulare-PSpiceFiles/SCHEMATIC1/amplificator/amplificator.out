@@ -1,0 +1,281 @@
+
+**** 11/26/23 21:18:06 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-amplificator"  [ c:\users\amy\desktop\facultatea masii\proiect amelia - v1\proiect amelia - schema simulare-
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "amplificator.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "D:/ORCAD/tools/pspice/library/pwrbjt.lib" 
+.LIB "D:/ORCAD/tools/pspice/library/on_bjt.lib" 
+.LIB "D:/ORCAD/tools/pspice/library/phil_diode.lib" 
+.LIB "D:/ORCAD/tools/pspice/library/nomd.lib" 
+.LIB "D:/ORCAD/tools/pspice/library/nom.lib" 
+.LIB "D:/ORCAD/tools/pspice/library/infineon_s_afbjt.lib" 
+.LIB "D:/ORCAD/tools/pspice/library/phil_bjt.lib" 
+.LIB "../../../mjd31c.lib" 
+.LIB "../../../mjd32c.lib" 
+* From [PSPICE NETLIST] section of C:\Users\Amy\AppData\Roaming\SPB_16.6\cdssetup\OrCAD_PSpice/16.6.0/PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.AC DEC 10 1 100Meg
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source PROIECT AMELIA - SCHEMA SIMULARE
+R_R28         VO N00584  0.47  
+R_R30         VO VS  0.1  
+R_Rs         0 VS  8  
+R_R29         N20729 VO  0.47  
+R_R26         VO N00177  51  
+V_V1         N00151 0 27Vdc
+V_V2         0 N01670 27Vdc
+R_R7         N05293 N06736  585  
+R_R8         N01670 DIF_OUT  3.9k  
+R_R9         N06736 N05437  415  
+R_R10         0 N52525  22k  
+R_R11         N06863 N00151  6.8k  
+R_R12         0 N08040  22k  
+R_R13         N07570 N00151  68  
+R_R14         N10076 N08118  1.5k  
+R_R15         PILOT_OUT N10076  770  
+R_R16         N01670 N11440  33  
+R_R17         N01670 N11647  510  
+R_R18         N12315 VO  15k  
+R_R19         N117712 N12315  2k  
+R_R27         N44774 VO  51  
+C_C1         N11973 PILOT_OUT  10p  
+R_R20         0 DIF_IN  47k  
+V_Vi         IN 0  AC 1
++SIN 0 2.75V 1k 0 0 0
+Q_Q3         N06736 N52525 N06863 QBC856A/PLP 
+Q_Q1         DIF_OUT DIF_IN N05293 QBC856A/PLP 
+Q_Q2         N01670 N12315 N05437 QBC856A/PLP 
+Q_Q7         N08118 N08040 N07570 QBC856A/PLP 
+Q_Q6         N08040 N07570 N00151 QBC856A/PLP 
+Q_Q4         PILOT_OUT N11647 N11440 BC846_1 
+Q_Q12         0 N11973 N11647 BC846_1 
+Q_Q5         N08118 N10076 PILOT_OUT BC846_1 
+Q_Q13         N11973 N11440 N01670 BC846_1 
+Q_Q9         N01670 PILOT_OUT N44774 BC807_1 
+Q_Q8         N00151 N08118 N00177 BC817_1 
+D_D3         N52525 N00151 BZX84C8V2/PLP 
+Q_Q14         N01670 N44774 N20729 Qmjd32ct4g 
+Q_Q15         N00151 N00177 N00584 Qmjd31c 
+C_C2         IN DIF_IN  10u  
+R_R31         DIF_OUT N11973  0.1  
+C_C3         0 N117712  10u  
+
+**** RESUMING amplificator.cir ****
+.END
+
+**** 11/26/23 21:18:06 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-amplificator"  [ c:\users\amy\desktop\facultatea masii\proiect amelia - v1\proiect amelia - schema simulare-
+
+
+ ****     Diode MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               BZX84C8V2/PLP   
+          IS  110.880000E-18 
+           N     .92657      
+         ISR  146.750000E-12 
+         IKF  149.75         
+          BV    8.3329       
+         IBV    1.0062       
+          RS     .85899      
+          TT    2.770000E-06 
+         CJO   54.185000E-12 
+          VJ     .66823      
+           M     .33443      
+
+
+**** 11/26/23 21:18:06 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-amplificator"  [ c:\users\amy\desktop\facultatea masii\proiect amelia - v1\proiect amelia - schema simulare-
+
+
+ ****     BJT MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               QBC856A/PLP     BC846_1         BC807_1         BC817_1         
+               PNP             NPN             PNP             NPN             
+       LEVEL    1               1               1               1            
+          IS   11.700000E-15   45.000000E-15  230.000000E-15  180.000000E-15 
+          BF  161.3           516.544         504.327         449.302        
+          NF     .9972          1.01            1               1            
+         VAF   59.62           74              26              95            
+         IKF     .15             .708            .78             .82         
+         ISE   17.620000E-15   55.668000E-15   39.284000E-15    8.480000E-15 
+          NE    1.661           2.567           1.944           1.566        
+          BR    6.78            7.745          23              16.919        
+          NR     .9967          1.015           1.002           1.005        
+         VAR   15.4            14               4.5            13            
+         IKR     .048           1                .195            .663        
+         ISC  150.600000E-15    1.084000E-12  118.000000E-18  102.000000E-15 
+          NC    1.32            4.063           3.025           1.764        
+         ISS    0               0               0               0            
+          RB   10               9                .8              .75         
+         RBM    5               4.5              .4              .375        
+         IRB    5.000000E-06  100.000000E-06  100.000000E-06  100.000000E-06 
+          RE     .689            .35             .203            .17         
+          RC     .61            1.445            .262            .289        
+         CJE   13.250000E-12   13.050000E-12   57.177000E-12   63.400000E-12 
+         VJE     .8514           .69            1                .85         
+         MJE     .3999           .375            .47             .372        
+         CJC    6.396000E-12    4.100000E-12   28.600000E-12   16.600000E-12 
+         VJC     .2182           .75            1                .78         
+         MJC     .333            .42             .52             .433        
+        XCJC     .6288           .65             .65             .65         
+         CJS    0               0               0               0            
+         VJS     .75             .75             .75             .75         
+         MJS     .333                                                        
+          FC     .8981           .75             .75             .75         
+          TF  833.300000E-12  620.000000E-12  664.000000E-12  810.000000E-12 
+         XTF    2.41           68               6.35            4.3          
+         VTF    6.262           1               2               1.5          
+         ITF     .097            .72             .25             .45         
+         PTF                    1               1               1            
+          TR   70.000000E-09    2.500000E-09    2.600000E-09    2.600000E-09 
+         XTB                    1.4             1.7             1.5          
+         XTI                    3.2             4.8             4.8          
+          KF    0              10.000000E-15    5.000000E-15    5.000000E-15 
+          AF    1               1               1               1            
+          CN    2.2             2.42            2.2             2.42         
+           D     .52             .87             .52             .87         
+
+
+               Qmjd31c         Qmjd32ct4g      
+               NPN             PNP             
+       LEVEL    1               1            
+          IS   90.620200E-12  363.152000E-15 
+          EG    1.05            1.15135      
+          BF  500             500            
+          NF    1.17603          .981175     
+         VAF   29.2393          8.02311      
+         IKF     .108267         .255979     
+         ISE  537.193000E-09    1.395810E-09 
+          NE    4               2.64418      
+          BR  367.353          26.8791       
+          NR    5                .990094     
+         VAR    1.631          38.8632       
+         IKR    1.15207         2.55979      
+         ISC    1.157540E-09  254.712000E-15 
+          NC    1.49179         1.09617      
+         ISS    0               0            
+          RB   22.4853        210.108        
+         RBM    1.000000E-12   10.000000E-06 
+         IRB    2.209370E-03   13.167500E-06 
+          RE  100.000000E-06     .03296      
+          RC     .138633         .164799     
+         CJE  373.889000E-12  201.825000E-12 
+         VJE     .67672          .360096     
+         MJE     .575056         .350357     
+         CJC  352.510000E-12  118.774000E-12 
+         VJC     .884306         .694849     
+         MJC     .473486         .382715     
+        XCJC     .1              .778775     
+         CJS    0               0            
+         VJS     .75             .75         
+         MJS     .5              .5          
+          FC     .8              .9          
+          TF   10.000000E-09    3.622020E-09 
+         XTF    3.4926        276.075        
+         VTF   12.6615           .608188     
+         ITF     .052395        7.779510E-03 
+          TR    3.298030E-06    2.029570E-06 
+         XTB  999.997000E-15     .709265     
+         XTI    1.000000E-12    4.43052      
+          KF    0               0            
+          AF    1               1            
+          CN    2.42            2.2          
+           D     .87             .52         
+
+
+**** 11/26/23 21:18:06 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-amplificator"  [ c:\users\amy\desktop\facultatea masii\proiect amelia - v1\proiect amelia - schema simulare-
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   IN)    0.0000  (   VO)-35.88E-06  (   VS)-35.44E-06  (DIF_IN)     .0900     
+
+(N00151)   27.0000 (N00177)     .3964 (N00584) 7.342E-06 (N01670)  -27.0000     
+
+(N05293)     .7088 (N05437)     .6756 (N06736)     .9560 (N06863)   19.4960     
+
+(N07570)   26.3460 (N08040)   25.6390 (N08118)    1.0261 (N10076)    -.3308     
+
+(N11440)  -26.6840 (N11647)  -26.0050 (N11973)  -25.3710 (N12315)     .0450     
+
+(N20729)-41.42E-06 (N44774)    -.4009 (N52525)   18.8490 (DIF_OUT)  -25.3710    
+
+(N117712)     .0450                   (PILOT_OUT)   -1.0139                 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -2.055E-02
+    V_V2        -2.049E-02
+    V_Vi         0.000E+00
+
+    TOTAL POWER DISSIPATION   1.11E+00  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 11/26/23 21:18:06 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-amplificator"  [ c:\users\amy\desktop\facultatea masii\proiect amelia - v1\proiect amelia - schema simulare-
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =         .08
+

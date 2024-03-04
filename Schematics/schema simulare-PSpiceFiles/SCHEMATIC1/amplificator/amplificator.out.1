@@ -1,0 +1,102 @@
+
+**** 11/21/23 14:58:51 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-amplificator"  [ C:\Users\Amy\Desktop\facultatea masii\Proiect Amelia - V1\proiect amelia - schema simulare-
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "amplificator.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "C:/../../Cadence/SPB_17.2/tools/pspice/library/infineon_s_afbjt.lib" 
+---------------------------------------------------------------------------$
+ERROR(ORPSIM-16276): Can't find library
+.LIB "../../../mjd31c.lib" 
+.LIB "../../../mjd32c.lib" 
+.LIB "C:/../../Cadence/SPB_17.2/tools/pspice/library/nom.lib" 
+--------------------------------------------------------------$
+ERROR(ORPSIM-16276): Can't find library
+.LIB "C:/../../Cadence/SPB_17.2/tools/pspice/library/nomd.lib" 
+---------------------------------------------------------------$
+ERROR(ORPSIM-16276): Can't find library
+.LIB "C:/../../Cadence/SPB_17.2/tools/pspice/library/pwrbjt.lib" 
+-----------------------------------------------------------------$
+ERROR(ORPSIM-16276): Can't find library
+.LIB "C:/../../Cadence/SPB_17.2/tools/pspice/library/phil_diode.lib" 
+---------------------------------------------------------------------$
+ERROR(ORPSIM-16276): Can't find library
+.LIB "C:/../../Cadence/SPB_17.2/tools/pspice/library/on_bjt.lib" 
+-----------------------------------------------------------------$
+ERROR(ORPSIM-16276): Can't find library
+.LIB "C:/../../Cadence/SPB_17.2/tools/pspice/library/phil_bjt.lib" 
+* From [PSPICE NETLIST] section of C:\Users\Amy\AppData\Roaming\SPB_16.6\cdssetup\OrCAD_PSpice/16.6.0/PSpice.ini file:
+-------------------------------------------------------------------$
+ERROR(ORPSIM-16276): Can't find library
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.TRAN  0 5m 0 1u 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source PROIECT AMELIA - SCHEMA SIMULARE
+R_R28         VO N00584  0.47  
+R_R30         VO VS  0.1  
+R_Rs         0 VS  8  
+R_R29         N20729 VO  0.47  
+R_R26         VO N00177  51  
+V_V1         N00151 0 27Vdc
+V_V2         0 N01670 27Vdc
+R_R7         N05293 N06736  585  
+R_R8         N01670 DIF_OUT  3.9k  
+R_R9         N06736 N05437  415  
+R_R10         0 N52525  22k  
+R_R11         N06863 N00151  6.8k  
+R_R12         0 N08040  22k  
+R_R13         N07570 N00151  68  
+R_R14         N10076 N08118  1.5k  
+R_R15         PILOT_OUT N10076  770  
+R_R16         N01670 N11440  33  
+R_R17         N01670 N11647  510  
+R_R18         N12315 VO  15k  
+R_R19         N117712 N12315  2k  
+R_R27         N44774 VO  51  
+C_C1         N11973 PILOT_OUT  10p  
+R_R20         0 DIF_IN  47k  
+V_Vi         IN 0  AC 1
++SIN 0 2.75V 1k 0 0 0
+Q_Q3         N06736 N52525 N06863 QBC856A/PLP 
+Q_Q1         DIF_OUT DIF_IN N05293 QBC856A/PLP 
+Q_Q2         N01670 N12315 N05437 QBC856A/PLP 
+Q_Q7         N08118 N08040 N07570 QBC856A/PLP 
+Q_Q6         N08040 N07570 N00151 QBC856A/PLP 
+Q_Q4         PILOT_OUT N11647 N11440 BC846_1 
+Q_Q12         0 N11973 N11647 BC846_1 
+Q_Q5         N08118 N10076 PILOT_OUT BC846_1 
+Q_Q13         N11973 N11440 N01670 BC846_1 
+Q_Q9         N01670 PILOT_OUT N44774 BC807_1 
+Q_Q8         N00151 N08118 N00177 BC817_1 
+D_D3         N52525 N00151 BZX84C8V2/PLP 
+Q_Q14         N01670 N44774 N20729 Qmjd32ct4g 
+Q_Q15         N00151 N00177 N00584 Qmjd31c 
+C_C2         IN DIF_IN  10u  
+R_R31         DIF_OUT N11973  0.1  
+C_C3         0 N117712  10u  
+
+**** RESUMING amplificator.cir ****
+.END
+

@@ -1,0 +1,219 @@
+
+**** 11/12/23 16:47:36 ******* PSpice 10.5.0 (Jan 2005) ******* ID# 73267576 *
+
+ ** Profile: "SCHEMATIC1-Amplif"  [ C:\USERS\BOGDAN\DESKTOP\Proiect Amelia-PSpiceFiles\SCHEMATIC1\Amplif.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "Amplif.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\OrCAD\OrCAD_10.5\tools\PSpice\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.DC LIN V_V3 -5 5 0.01 
+.PROBE V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source PROIECT AMELIA
+R_R19         0 N12315  1k  
+V_V1         N00151 0 30Vdc
+R_R18         N12315 IESIRE  7k  
+R_R12         0 N07643  33k  
+C_C1         N05123 N10264  15p  
+R_R28         N00653 N00584  0.47  
+Q_Q7         N08118 N07643 N07570 BC856_1 
+V_V2         0 N01186 30Vdc
+R_R30         N00653 IESIRE  0.1  
+Q_Q12         N08118 N10076 N10264 BC846_1 
+R_R7         N05293 N05343  500  
+R_R16         N01186 N11440  22  
+R_R3         0 IESIRE  8  
+R_R27         N23107 N00653  51  
+Q_Q3         N05343 N06799 N06863 BC856_1 
+Q_Q1         N05123 IN N05293 BC856_1 
+R_R13         N07570 N00151  40  
+R_R29         N00502 N00653  0.47  
+R_R8         N01186 N05123  3.4k  
+Q_Q5         N00151 N08118 N00177 BC817-25 
+Q_Q10         N10264 N11647 N11440 BC846_1 
+Q_Q9         N07643 N07570 N00151 BC856_1 
+R_R14         N10076 N08118  1.2k  
+R_R26         N00653 N00177  51  
+Q_Q6         N01186 N10264 N23107 BC807_1 
+Q_Q13         N00151 N00177 N00584 TIP41B
+Q_Q2         N01186 N12315 N05437 BC856_1 
+R_R17         N01186 N11647  470  
+R_R9         N05343 N05437  500  
+Q_Q15         N01186 N23107 N00502 TIP42B
+R_R11         N06863 N00151  7.5k  
+Q_Q11         N05123 N11440 N01186 BC846_1 
+R_R10         0 N06799  27k  
+Q_Q66         0 N05123 N11647 BC846_1 
+R_R15         N10264 N10076  500  
+V_V3         IN 0  
++SIN 0 2.75 1000 0 0 0
+D_D2         N06799 N00151 BZX84C8V2/PLP 
+
+**** RESUMING Amplif.cir ****
+.END
+
+**** 11/12/23 16:47:36 ******* PSpice 10.5.0 (Jan 2005) ******* ID# 73267576 *
+
+ ** Profile: "SCHEMATIC1-Amplif"  [ C:\USERS\BOGDAN\DESKTOP\Proiect Amelia-PSpiceFiles\SCHEMATIC1\Amplif.sim ] 
+
+
+ ****     Diode MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               BZX84C8V2/PLP   
+          IS  110.880000E-18 
+           N     .92657      
+         ISR  146.750000E-12 
+         IKF  149.75         
+          BV    8.3329       
+         IBV    1.0062       
+          RS     .85899      
+          TT    2.770000E-06 
+         CJO   54.185000E-12 
+          VJ     .66823      
+           M     .33443      
+
+
+**** 11/12/23 16:47:36 ******* PSpice 10.5.0 (Jan 2005) ******* ID# 73267576 *
+
+ ** Profile: "SCHEMATIC1-Amplif"  [ C:\USERS\BOGDAN\DESKTOP\Proiect Amelia-PSpiceFiles\SCHEMATIC1\Amplif.sim ] 
+
+
+ ****     BJT MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               BC856_1         BC846_1         BC807_1         BC817-25        
+               PNP             NPN             PNP             NPN             
+       LEVEL    1               1               1               1            
+          IS   28.000000E-15   45.000000E-15  230.000000E-15   32.530000E-15 
+          BF  284.436         516.544         504.327         294.4          
+          NF    1               1.01            1               1            
+         VAF   43              74              26             100            
+         IKF     .38             .708            .78             .8311       
+         ISE   24.903000E-15   55.668000E-15   39.284000E-15  318.500000E-15 
+          NE    2.234           2.567           1.944           1.642        
+          BR    4.8             7.745          23               5.855        
+          NR    1.005           1.015           1.002           1            
+         VAR    6.96           14               4.5                          
+         IKR     .932           1                .195            .1075       
+         ISC  125.000000E-15    1.084000E-12  118.000000E-18  199.700000E-15 
+          NC    2.074           4.063           3.025           2.09         
+          NK                                                     .5663       
+         ISS    0               0               0               0            
+          RB    2.2             9                .8                          
+         RBM    1.5             4.5              .4                          
+         IRB  100.000000E-06  100.000000E-06  100.000000E-06                 
+          RE     .3              .35             .203           0            
+          RC    2.251           1.445            .262            .4196       
+         CJE   11.800000E-12   13.050000E-12   57.177000E-12   71.140000E-12 
+         VJE    1                .69            1                .5          
+         MJE     .435            .375            .47             .3333       
+         CJC    8.700000E-12    4.100000E-12   28.600000E-12   24.290000E-12 
+         VJC     .9              .75            1                .5          
+         MJC     .6              .42             .52             .3333       
+        XCJC     .65             .65             .65            1            
+         CJS    0               0               0               0            
+         VJS     .75             .75             .75             .75         
+          FC     .75             .75             .75                         
+          TF  600.000000E-12  620.000000E-12  664.000000E-12  660.800000E-12 
+         XTF    6.5            68               6.35           88.29         
+         VTF    2               1               2              10            
+         ITF     .314            .72             .25            2.569        
+         PTF    1               1               1                            
+          TR    2.604000E-09    2.500000E-09    2.600000E-09   10.000000E-09 
+         XTB    1.6             1.4             1.7             1.5          
+         XTI    3.3             3.2             4.8                          
+          KF    5.000000E-15   10.000000E-15    5.000000E-15    0            
+          AF    1               1               1               1            
+          CN    2.2             2.42            2.2             2.42         
+           D     .52             .87             .52             .87         
+
+
+               TIP41B          TIP42B          
+               NPN             PNP             
+       LEVEL    1               1            
+          IS  457.500000E-15   66.190000E-15 
+          BF  156.7           137.6          
+          NF    1               1            
+         VAF   50             100            
+         IKF    3.296           1.642        
+         ISE    1.346000E-12  862.200000E-15 
+          NE    1.34            1.481        
+          BR    7.639           5.88         
+          NR    1               1            
+         IKR    8.131000E-03    3.555        
+         ISC  604.100000E-15  273.500000E-15 
+          NC    2.168           1.24         
+          NK     .5961           .5695       
+         ISS    0               0            
+          RB     .1              .1          
+          RE    0               0            
+          RC     .09129          .07939      
+         CJE  433.000000E-12  390.100000E-12 
+         VJE     .75             .75         
+         MJE     .5              .4343       
+         CJC  278.700000E-12  870.400000E-12 
+         VJC     .75             .75         
+         MJC     .385            .6481       
+        XCJC    1               1            
+         CJS    0               0            
+         VJS     .75             .75         
+          TF   37.340000E-09   23.210000E-09 
+         XTF    1.163           5.982        
+         VTF   10              10            
+         ITF   35.68           71.33         
+          TR    1.412000E-06  235.400000E-09 
+         XTB    2.2             2            
+          KF    0               0            
+          AF    1               1            
+          CN    2.42            2.2          
+           D     .87             .52         
+
+
+
+          JOB CONCLUDED
+
+**** 11/12/23 16:47:36 ******* PSpice 10.5.0 (Jan 2005) ******* ID# 73267576 *
+
+ ** Profile: "SCHEMATIC1-Amplif"  [ C:\USERS\BOGDAN\DESKTOP\Proiect Amelia-PSpiceFiles\SCHEMATIC1\Amplif.sim ] 
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =         .38
+

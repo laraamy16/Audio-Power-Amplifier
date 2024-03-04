@@ -1,0 +1,96 @@
+
+**** 11/21/23 14:22:32 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-amplificator"  [ C:\Users\Amy\Desktop\facultatea masii\Proiect Amelia - V1\proiect amelia - schema reala-psp
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "amplificator.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "C:/../../Cadence/SPB_17.2/tools/pspice/library/nom.lib" 
+--------------------------------------------------------------$
+ERROR(ORPSIM-16276): Can't find library
+.LIB "C:/../../Cadence/SPB_17.2/tools/pspice/library/nomd.lib" 
+---------------------------------------------------------------$
+ERROR(ORPSIM-16276): Can't find library
+.LIB "C:/../../Cadence/SPB_17.2/tools/pspice/library/pwrbjt.lib" 
+-----------------------------------------------------------------$
+ERROR(ORPSIM-16276): Can't find library
+.LIB "C:/../../Cadence/SPB_17.2/tools/pspice/library/phil_diode.lib" 
+---------------------------------------------------------------------$
+ERROR(ORPSIM-16276): Can't find library
+.LIB "C:/../../Cadence/SPB_17.2/tools/pspice/library/on_bjt.lib" 
+-----------------------------------------------------------------$
+ERROR(ORPSIM-16276): Can't find library
+.LIB "C:/../../Cadence/SPB_17.2/tools/pspice/library/infineon_s_afbjt.lib" 
+---------------------------------------------------------------------------$
+ERROR(ORPSIM-16276): Can't find library
+.LIB "C:/../../Cadence/SPB_17.2/tools/pspice/library/phil_bjt.lib" 
+-------------------------------------------------------------------$
+ERROR(ORPSIM-16276): Can't find library
+.LIB "../../../mjd32c.lib" 
+.LIB "../../../mjd31c.lib" 
+* From [PSPICE NETLIST] section of C:\Users\Amy\AppData\Roaming\SPB_16.6\cdssetup\OrCAD_PSpice/16.6.0/PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.TRAN  0 5m 0 1u 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source PROIECT AMELIA - SCHEMA REALA
+R_R28         VO N00584  0.47  
+R_R30         VO US  0.1  
+R_Rs         0 US  10  
+R_R29         N20729 VO  0.47  
+R_R26         VO N00177  51  
+R_R8         -27V DIF_OUT  3.9k  
+R_R10         0 N52525  22k  
+R_R11         N06863 +27V  6.8k  
+R_R12         0 N08040  22k  
+R_R13         N07570 +27V  68  
+R_R14         N10076 N08118  2.1k  
+R_R16         -27V N11440  33  
+R_R17         -27V N11649  510  
+R_R18         N12315 VO  6.8k  
+R_R19         N096441 N12315  1k  
+R_R27         N44774 VO  51  
+C_C1         DIF_OUT N10264  10p  
+R_R20         0 DIF_IN  47k  
+Q_Q3         N06736 N52525 N06863 QBC856A/PLP 
+Q_Q1         DIF_OUT DIF_IN N05293 QBC856A/PLP 
+Q_Q2         -27V N12315 N05437 QBC856A/PLP 
+Q_Q7         N08118 N08040 N07570 QBC856A/PLP 
+Q_Q6         N08040 N07570 +27V QBC856A/PLP 
+Q_Q4         N10264 N11649 N11440 BC846_1 
+Q_Q12         0 DIF_OUT N11649 BC846_1 
+Q_Q5         N08118 N10076 N10264 BC846_1 
+Q_Q13         DIF_OUT N11440 -27V BC846_1 
+Q_Q9         -27V N10264 N44774 BC807_1 
+Q_Q8         +27V N08118 N00177 BC817_1 
+D_D3         N52525 +27V BZX84C8V2/PLP 
+Q_Q14         -27V N44774 N20729 QMJD32CT4G 
+Q_Q15         +27V N00177 N00584 QMJD31C 
+C_C2         UIN DIF_IN  10u  
+X_R7         N05293 N06736 N05437 POT PARAMS: SET=0.5 VALUE=1K
+X_R15         N10264 N10076 N10076 POT PARAMS: SET=0.5 VALUE=1K
+C_C3         0 N096441  10u  
+
+**** RESUMING amplificator.cir ****
+.END
+

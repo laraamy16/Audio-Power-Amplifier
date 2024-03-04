@@ -1,0 +1,77 @@
+
+**** 11/12/23 17:30:36 ******* PSpice 10.5.0 (Jan 2005) ******* ID# 71432568 *
+
+ ** Profile: "SCHEMATIC1-amplif putere"  [ C:\USERS\BOGDAN\DESKTOP\Proiect Amelia-PSpiceFiles\SCHEMATIC1\amplif putere.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "amplif putere.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\OrCAD\OrCAD_10.5\tools\PSpice\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 5m 0 10u 
+.PROBE V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source PROIECT AMELIA
+R_R19         0 N12315  1k  
+V_V1         N00151 0 27Vdc
+R_R18         N12315 IESIRE  7k  
+R_R12         0 N07643  33k  
+C_C1         N05123 N10264  15p  
+R_R28         N00653 N00584  0.47  
+Q_Q7         N08118 N07643 N07570 BC856 
+V_V2         0 N01670 27Vdc
+R_R30         N00653 IESIRE  0.1  
+Q_Q12         N08118 N10076 N10264 BC846_1 
+R_R7         N05293 N05343  500  
+R_R16         N01670 N11440  22  
+C_C2         N49368 N16345  50uF  
+R_R3         0 IESIRE  8  
+V_V3         N49368 0  
++SIN 0 2.75 1k 0 0 0
+R_R27         N44774 N00653  51  
+Q_Q3         N05343 N52525 N06863 BC856 
+Q_Q1         N05123 N16345 N05293 BC856 
+R_R13         N07570 N00151  40  
+R_R29         N20729 N00653  0.47  
+R_R8         N01670 N05123  3.4k  
+Q_Q5         N00151 N08118 N00177 BC817-25 
+Q_Q10         N10264 N11647 N11440 BC846_1 
+Q_Q9         N07643 N07570 N00151 BC856 
+R_R14         N10076 N08118  1.2k  
+R_R26         N00653 N00177  51  
+Q_Q6         N01670 N10264 N44774 BC807_1 
+Q_Q13         N00151 N00177 N00584 TIP41B
+Q_Q2         N01670 N12315 N05437 BC856 
+R_R20         0 N16345  45k  
+R_R17         N01670 N11647  470  
+R_R9         N05343 N05437  500  
+Q_Q67         N01670 N44774 N20729 TIP42B
+R_R11         N06863 N00151  7.5k  
+Q_Q11         N05123 N11440 N01670 BC846 
+R_R10         0 N52525  27k  
+Q_Q66         0 N05123 N11647 BC846 
+R_R15         N10264 N10076  500  
+D_D2         N52525 N00151 BZX84C8V2 
+
+**** RESUMING "amplif putere.cir" ****
+.END
+
+ERROR -- Model BZX84C8V2 used by D_D2 is undefined

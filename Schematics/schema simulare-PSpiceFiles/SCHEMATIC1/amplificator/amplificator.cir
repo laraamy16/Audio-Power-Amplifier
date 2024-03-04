@@ -1,0 +1,28 @@
+** Profile: "SCHEMATIC1-amplificator"  [ c:\users\amy\desktop\facultatea masii\proiect amelia - v1\proiect amelia - schema simulare-pspicefiles\schematic1\amplificator.sim ] 
+
+** Creating circuit file "amplificator.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "D:/ORCAD/tools/pspice/library/pwrbjt.lib" 
+.LIB "D:/ORCAD/tools/pspice/library/on_bjt.lib" 
+.LIB "D:/ORCAD/tools/pspice/library/phil_diode.lib" 
+.LIB "D:/ORCAD/tools/pspice/library/nomd.lib" 
+.LIB "D:/ORCAD/tools/pspice/library/nom.lib" 
+.LIB "D:/ORCAD/tools/pspice/library/infineon_s_afbjt.lib" 
+.LIB "D:/ORCAD/tools/pspice/library/phil_bjt.lib" 
+.LIB "../../../mjd31c.lib" 
+.LIB "../../../mjd32c.lib" 
+* From [PSPICE NETLIST] section of C:\Users\Amy\AppData\Roaming\SPB_16.6\cdssetup\OrCAD_PSpice/16.6.0/PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.AC DEC 10 1 100Meg
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+.END

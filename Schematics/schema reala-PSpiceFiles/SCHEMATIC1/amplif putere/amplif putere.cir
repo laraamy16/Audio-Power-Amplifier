@@ -1,0 +1,18 @@
+** Profile: "SCHEMATIC1-amplif putere"  [ C:\USERS\BOGDAN\DESKTOP\Proiect Amelia-PSpiceFiles\SCHEMATIC1\amplif putere.sim ] 
+
+** Creating circuit file "amplif putere.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\OrCAD\OrCAD_10.5\tools\PSpice\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 5m 0 10u 
+.PROBE V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+.END

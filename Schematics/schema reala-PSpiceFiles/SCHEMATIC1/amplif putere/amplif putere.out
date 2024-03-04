@@ -1,0 +1,260 @@
+
+**** 11/12/23 17:33:02 ******* PSpice 10.5.0 (Jan 2005) ******* ID# 71432568 *
+
+ ** Profile: "SCHEMATIC1-amplif putere"  [ C:\USERS\BOGDAN\DESKTOP\Proiect Amelia-PSpiceFiles\SCHEMATIC1\amplif putere.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "amplif putere.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\OrCAD\OrCAD_10.5\tools\PSpice\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 5m 0 10u 
+.PROBE V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source PROIECT AMELIA
+R_R19         0 N12315  1k  
+V_V1         N00151 0 27Vdc
+R_R18         N12315 IESIRE  7k  
+R_R12         0 N07643  33k  
+C_C1         N05123 N10264  15p  
+R_R28         N00653 N00584  0.47  
+Q_Q7         N08118 N07643 N07570 BC856 
+V_V2         0 N01670 27Vdc
+R_R30         N00653 IESIRE  0.1  
+Q_Q12         N08118 N10076 N10264 BC846_1 
+R_R7         N05293 N05343  500  
+R_R16         N01670 N11440  22  
+C_C2         IN N16345  50uF  
+R_R3         0 IESIRE  8  
+V_V3         IN 0  
++SIN 0 2.75 1k 0 0 0
+R_R27         N44774 N00653  51  
+Q_Q3         N05343 N52525 N06863 BC856 
+Q_Q1         N05123 N16345 N05293 BC856 
+R_R13         N07570 N00151  40  
+R_R29         N20729 N00653  0.47  
+R_R8         N01670 N05123  3.4k  
+Q_Q5         N00151 N08118 N00177 BC817-25 
+Q_Q10         N10264 N11647 N11440 BC846_1 
+Q_Q9         N07643 N07570 N00151 BC856 
+R_R14         N10076 N08118  1.2k  
+R_R26         N00653 N00177  51  
+Q_Q6         N01670 N10264 N44774 BC807_1 
+Q_Q13         N00151 N00177 N00584 TIP41B
+Q_Q2         N01670 N12315 N05437 BC856 
+R_R20         0 N16345  45k  
+R_R17         N01670 N11647  470  
+R_R9         N05343 N05437  500  
+Q_Q67         N01670 N44774 N20729 TIP42B
+R_R11         N06863 N00151  7.5k  
+Q_Q11         N05123 N11440 N01670 BC846 
+R_R10         0 N52525  27k  
+Q_Q66         0 N05123 N11647 BC846 
+R_R15         N10264 N10076  500  
+D_D2         N52525 N00151 BZX84C8V2/PLP 
+
+**** RESUMING "amplif putere.cir" ****
+.END
+
+**** 11/12/23 17:33:02 ******* PSpice 10.5.0 (Jan 2005) ******* ID# 71432568 *
+
+ ** Profile: "SCHEMATIC1-amplif putere"  [ C:\USERS\BOGDAN\DESKTOP\Proiect Amelia-PSpiceFiles\SCHEMATIC1\amplif putere.sim ] 
+
+
+ ****     Diode MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               BZX84C8V2/PLP   
+          IS  110.880000E-18 
+           N     .92657      
+         ISR  146.750000E-12 
+         IKF  149.75         
+          BV    8.3329       
+         IBV    1.0062       
+          RS     .85899      
+          TT    2.770000E-06 
+         CJO   54.185000E-12 
+          VJ     .66823      
+           M     .33443      
+
+
+**** 11/12/23 17:33:02 ******* PSpice 10.5.0 (Jan 2005) ******* ID# 71432568 *
+
+ ** Profile: "SCHEMATIC1-amplif putere"  [ C:\USERS\BOGDAN\DESKTOP\Proiect Amelia-PSpiceFiles\SCHEMATIC1\amplif putere.sim ] 
+
+
+ ****     BJT MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               BC856           BC846           BC846_1         BC807_1         
+               PNP             NPN             NPN             PNP             
+       LEVEL    1               1               1               1            
+          IS   28.000000E-15   45.000000E-15   45.000000E-15  230.000000E-15 
+          BF  284.436         516.544         516.544         504.327        
+          NF    1               1.01            1.01            1            
+         VAF   43              74              74              26            
+         IKF     .38             .708            .708            .78         
+         ISE   24.903000E-15   55.668000E-15   55.668000E-15   39.284000E-15 
+          NE    2.234           2.567           2.567           1.944        
+          BR    4.8             7.745           7.745          23            
+          NR    1.005           1.015           1.015           1.002        
+         VAR    6.96           14              14               4.5          
+         IKR     .932           1               1                .195        
+         ISC  125.000000E-15    1.084000E-12    1.084000E-12  118.000000E-18 
+          NC    2.074           4.063           4.063           3.025        
+         ISS    0               0               0               0            
+          RB    2.2             9               9                .8          
+         RBM    1.5             4.5             4.5              .4          
+         IRB  100.000000E-06  100.000000E-06  100.000000E-06  100.000000E-06 
+          RE     .3              .35             .35             .203        
+          RC    2.251           1.445           1.445            .262        
+         CJE   11.800000E-12   13.050000E-12   13.050000E-12   57.177000E-12 
+         VJE    1                .69             .69            1            
+         MJE     .435            .375            .375            .47         
+         CJC    8.700000E-12    4.100000E-12    4.100000E-12   28.600000E-12 
+         VJC     .9              .75             .75            1            
+         MJC     .6              .42             .42             .52         
+        XCJC     .65             .65             .65             .65         
+         CJS    0               0               0               0            
+         VJS     .75             .75             .75             .75         
+          FC     .75             .75             .75             .75         
+          TF  600.000000E-12  620.000000E-12  620.000000E-12  664.000000E-12 
+         XTF    6.5            68              68               6.35         
+         VTF    2               1               1               2            
+         ITF     .314            .72             .72             .25         
+         PTF    1               1               1               1            
+          TR    2.604000E-09    2.500000E-09    2.500000E-09    2.600000E-09 
+         XTB    1.6             1.4             1.4             1.7          
+         XTI    3.3             3.2             3.2             4.8          
+          KF    5.000000E-15   10.000000E-15   10.000000E-15    5.000000E-15 
+          AF    1               1               1               1            
+          CN    2.2             2.42            2.42            2.2          
+           D     .52             .87             .87             .52         
+
+
+               BC817-25        TIP41B          TIP42B          
+               NPN             NPN             PNP             
+       LEVEL    1               1               1            
+          IS   32.530000E-15  457.500000E-15   66.190000E-15 
+          BF  294.4           156.7           137.6          
+          NF    1               1               1            
+         VAF  100              50             100            
+         IKF     .8311          3.296           1.642        
+         ISE  318.500000E-15    1.346000E-12  862.200000E-15 
+          NE    1.642           1.34            1.481        
+          BR    5.855           7.639           5.88         
+          NR    1               1               1            
+         IKR     .1075          8.131000E-03    3.555        
+         ISC  199.700000E-15  604.100000E-15  273.500000E-15 
+          NC    2.09            2.168           1.24         
+          NK     .5663           .5961           .5695       
+         ISS    0               0               0            
+          RB                     .1              .1          
+          RE    0               0               0            
+          RC     .4196           .09129          .07939      
+         CJE   71.140000E-12  433.000000E-12  390.100000E-12 
+         VJE     .5              .75             .75         
+         MJE     .3333           .5              .4343       
+         CJC   24.290000E-12  278.700000E-12  870.400000E-12 
+         VJC     .5              .75             .75         
+         MJC     .3333           .385            .6481       
+        XCJC    1               1               1            
+         CJS    0               0               0            
+         VJS     .75             .75             .75         
+          TF  660.800000E-12   37.340000E-09   23.210000E-09 
+         XTF   88.29            1.163           5.982        
+         VTF   10              10              10            
+         ITF    2.569          35.68           71.33         
+          TR   10.000000E-09    1.412000E-06  235.400000E-09 
+         XTB    1.5             2.2             2            
+          KF    0               0               0            
+          AF    1               1               1            
+          CN    2.42            2.42            2.2          
+           D     .87             .87             .52         
+
+
+**** 11/12/23 17:33:02 ******* PSpice 10.5.0 (Jan 2005) ******* ID# 71432568 *
+
+ ** Profile: "SCHEMATIC1-amplif putere"  [ C:\USERS\BOGDAN\DESKTOP\Proiect Amelia-PSpiceFiles\SCHEMATIC1\amplif putere.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   IN)    0.0000  (IESIRE)     .3802 (N00151)   27.0000 (N00177)    1.0482     
+
+(N00584)     .4052 (N00653)     .3849 (N01670)  -27.0000 (N05123)  -25.3280     
+
+(N05293)     .6521 (N05343)     .9003 (N05437)     .6482 (N06863)   19.4760     
+
+(N07570)   26.3770 (N07643)   25.6820 (N08118)    1.7342 (N10076)     .0252     
+
+(N10264)    -.6727 (N11440)  -26.6580 (N11647)  -25.9650 (N12315)     .0485     
+
+(N16345)     .0522 (N20729)     .3849 (N44774)    -.0572 (N52525)   18.8550 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -7.421E-02
+    V_V2        -2.739E-02
+    V_V3         0.000E+00
+
+    TOTAL POWER DISSIPATION   2.74E+00  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 11/12/23 17:33:02 ******* PSpice 10.5.0 (Jan 2005) ******* ID# 71432568 *
+
+ ** Profile: "SCHEMATIC1-amplif putere"  [ C:\USERS\BOGDAN\DESKTOP\Proiect Amelia-PSpiceFiles\SCHEMATIC1\amplif putere.sim ] 
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =         .49
+

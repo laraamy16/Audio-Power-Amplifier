@@ -1,0 +1,7 @@
+ lib=C:\OrCAD\OrCAD_10.5\tools\PSpice\Library\phil_diode.lib, offset=55788, size=404
+ lib=C:\OrCAD\OrCAD_10.5\tools\PSpice\Library\infineon_s_afbjt.lib, offset=36530, size=695
+ lib=C:\OrCAD\OrCAD_10.5\tools\PSpice\Library\infineon_s_afbjt.lib, offset=24940, size=696
+ lib=C:\OrCAD\OrCAD_10.5\tools\PSpice\Library\infineon_s_afbjt.lib, offset=16042, size=696
+ lib=C:\OrCAD\OrCAD_10.5\tools\PSpice\Library\ebipolar.lib, offset=18520, size=371
+ lib=C:\OrCAD\OrCAD_10.5\tools\PSpice\Library\pwrbjt.lib, offset=224645, size=340
+ lib=C:\OrCAD\OrCAD_10.5\tools\PSpice\Library\pwrbjt.lib, offset=226013, size=343

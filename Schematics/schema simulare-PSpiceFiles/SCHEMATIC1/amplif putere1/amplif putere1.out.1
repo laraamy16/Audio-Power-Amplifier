@@ -1,0 +1,104 @@
+
+**** 11/12/23 19:15:15 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-amplif putere1"  [ c:\users\amy\desktop\facultatea masii\proiect amelia\proiect amelia-pspicefiles\schematic
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "amplif putere1.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Users\Amy\AppData\Roaming\SPB_16.6\cdssetup\OrCAD_PSpice/16.6.0/PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.TRAN  0 5m 0 10u 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source PROIECT AMELIA
+R_R28         N00653 N00584  0.47  
+R_R30         N00653 IESIRE  0.1  
+R_R3         0 IESIRE  8  
+R_R29         N20729 N00653  0.47  
+R_R26         N00653 N00177  51  
+V_V1         N00151 0 27Vdc
+V_V2         0 N01670 27Vdc
+R_R7         N05293 N06736  500  
+R_R8         N01670 N05123  3.4k  
+R_R9         N06736 N05437  500  
+R_R10         0 N52525  27k  
+R_R11         N06863 N00151  7.5k  
+R_R12         0 N08040  33k  
+R_R13         N07570 N00151  40  
+R_R14         N10076 N08118  1.2k  
+R_R15         N10264 N10076  500  
+R_R16         N01670 N11440  22  
+R_R17         N01670 N11647  470  
+R_R18         N12315 IESIRE  7k  
+R_R19         0 N12315  1k  
+R_R27         N44774 N00653  51  
+C_C1         N05123 N10264  15p  
+R_R20         0 IN  45k  
+V_Vi         IN 0  
++SIN 0 2.75 1k 0 0 0
+Q_Q15         N06736 N52525 N06863 QBC856A/PLP 
+Q_Q16         N05123 IN N05293 QBC856A/PLP 
+Q_Q17         N01670 N12315 N05437 QBC856A/PLP 
+Q_Q18         N08118 N08040 N07570 QBC856A/PLP 
+Q_Q19         N08040 N07570 N00151 QBC856A/PLP 
+Q_Q20         N10264 N11647 N11440 BC846_1 
+Q_Q21         0 N05123 N11647 BC846_1 
+Q_Q22         N08118 N10076 N10264 BC846_1 
+Q_Q23         N05123 N11440 N01670 BC846_1 
+Q_Q24         N01670 N10264 N44774 BC807_1 
+Q_Q25         N00151 N08118 N00177 BC817_1 
+Q_Q26         N00151 N00177 N00584 TIP41B
+Q_Q27         N01670 N44774 N20729 TIP42B
+D_D3         N52525 N00151 BZX84C8V2/PLP 
+
+**** RESUMING "amplif putere1.cir" ****
+.END
+
+ERROR(ORPSIM-15113): Model BZX84C8V2/PLP used by D_D3 is undefined
+
+ERROR(ORPSIM-15113): Model QBC856A/PLP used by Q_Q15 is undefined
+
+ERROR(ORPSIM-15113): Model QBC856A/PLP used by Q_Q16 is undefined
+
+ERROR(ORPSIM-15113): Model QBC856A/PLP used by Q_Q17 is undefined
+
+ERROR(ORPSIM-15113): Model QBC856A/PLP used by Q_Q18 is undefined
+
+ERROR(ORPSIM-15113): Model QBC856A/PLP used by Q_Q19 is undefined
+
+ERROR(ORPSIM-15113): Model BC846_1 used by Q_Q20 is undefined
+
+ERROR(ORPSIM-15113): Model BC846_1 used by Q_Q21 is undefined
+
+ERROR(ORPSIM-15113): Model BC846_1 used by Q_Q22 is undefined
+
+ERROR(ORPSIM-15113): Model BC846_1 used by Q_Q23 is undefined
+
+ERROR(ORPSIM-15113): Model BC807_1 used by Q_Q24 is undefined
+
+ERROR(ORPSIM-15113): Model BC817_1 used by Q_Q25 is undefined
+
+ERROR(ORPSIM-15113): Model TIP41B used by Q_Q26 is undefined
+
+ERROR(ORPSIM-15113): Model TIP42B used by Q_Q27 is undefined
+

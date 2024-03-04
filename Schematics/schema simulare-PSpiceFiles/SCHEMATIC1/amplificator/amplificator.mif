@@ -1,0 +1,7 @@
+ lib=D:\ORCAD\tools\pspice\library\phil_diode.lib, offset=55788, size=404
+ lib=D:\ORCAD\tools\PSpice\Library\phil_bjt.lib, offset=55851, size=627
+ lib=D:\ORCAD\tools\PSpice\Library\infineon_s_afbjt.lib, offset=24940, size=696
+ lib=D:\ORCAD\tools\PSpice\Library\infineon_s_afbjt.lib, offset=16042, size=696
+ lib=D:\ORCAD\tools\PSpice\Library\infineon_s_afbjt.lib, offset=19600, size=696
+ lib="c:\users\amy\desktop\facultatea masii\proiect amelia - v1\mjd31c.lib", offset=500, size=465
+ lib="c:\users\amy\desktop\facultatea masii\proiect amelia - v1\mjd32c.lib", offset=500, size=506
